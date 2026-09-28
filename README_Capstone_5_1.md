@@ -1,9 +1,8 @@
 # Capstone Checkpoint 5.1 --- Agent-Based RAG for the Wikipedia Retrieval Engine
 
 This checkpoint extends the Wikipedia Retrieval Engine from **advanced
-retrieval** into an **agent-based RAG workflow**.
-
-The implementation compares three levels of retrieval autonomy:
+retrieval** into an **agent-based RAG workflow**. The implementation compares 
+three levels of retrieval autonomy:
 
 1.  **Fixed retrieval** --- one hybrid retrieval pass followed by
     grounded answer generation.
@@ -102,8 +101,8 @@ capability available to the agent.
 A typical working folder for this checkpoint contains:
 
 ``` text
-Capstone_Checkpoint_5_1/
-├── Hybrid_2.py
+Checkpoint_5_1/
+├── Capstone_Checkpoint_5_1_Final.py
 ├── Wikipedia_10_text/
 │   ├── 85th_Academy_Awards.txt
 │   ├── Adolf_Hitler.txt
@@ -116,8 +115,12 @@ Capstone_Checkpoint_5_1/
 │   ├── Queen_Victoria.txt
 │   └── Steve_Jobs.txt
 ├── wikipedia_5_1_chroma_hf/
-│   └── checkpoint_5_1_manifest.json
-└── hybrid_agent_1.log
+│   └── checkpoint_5_1_wiki10.json
+└── Tool_using_agent_1.log
+└── README_Capstone_5_1.md
+└── Readme_5_1.png
+└── Output_agent_5.1.txt
+
 ```
 
 The Python file expects the converted Wikipedia text corpus and uses a
@@ -157,13 +160,13 @@ Lexical search:  BM25
 Then run the script:
 
 ``` bash
-python Hybrid_2.py
+python Capstone_Checkpoint_5_1_Final.py
 ```
 
 If the filename still contains parentheses, quote it in PowerShell:
 
 ``` powershell
-python "Hybrid_2(1).py"
+python "Capstone_Checkpoint_5_1_Final.py"
 ```
 
 ------------------------------------------------------------------------
@@ -1301,61 +1304,6 @@ only what answer it produced.
 -   the three-step budget may be too small for some questions; and
 -   the current `graph_expand` is local passage expansion rather than
     the full Module 4 metadata graph.
-
-------------------------------------------------------------------------
-
-## Relationship to Capstone Checkpoint 4.1
-
-Checkpoint 4.1 introduced **advanced retrieval**:
-
-``` text
-question
-   ↓
-query decomposition
-   ↓
-multiple searches
-   ↓
-score/evidence merging
-   ↓
-graph expansion
-   ↓
-grounded answer
-```
-
-Those retrieval stages were largely designed in advance.
-
-Checkpoint 5.1 changes the control structure:
-
-``` text
-question
-   ↓
-agent examines current state
-   ↓
-agent chooses next action
-   ↓
-tool executes
-   ↓
-agent examines new evidence
-   ↓
-agent chooses again
-```
-
-The difference is therefore not merely the presence of decomposition or
-graph-related retrieval.
-
-The important difference is **who decides when each capability should be
-used**.
-
-``` text
-Checkpoint 4.1:
-advanced retrieval strategy is primarily predetermined
-
-Checkpoint 5.1:
-retrieval strategy is selected dynamically at runtime
-```
-
-This makes Checkpoint 5.1 a natural continuation of the Wikipedia
-Retrieval Engine developed throughout the course.
 
 ------------------------------------------------------------------------
 
