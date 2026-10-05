@@ -21,12 +21,10 @@ The security workload is loaded from the separate
 
 ``` text
 final/
-├── Output_logs/
 ├── wikipedia_5_1_chroma_hf/
 ├── Wikipedia_10_text/
 ├── 6_1_model_ladder_3.log
 ├── 6_1_model_ladder_comparison_3.json
-├── checkpoint_6_1_external_cases.py
 ├── checkpoint_6_1_SECURITY_MODEL_LADDER.py
 ├── checkpoint_6_1_test_cases.json
 ├── Output_final_3.txt
