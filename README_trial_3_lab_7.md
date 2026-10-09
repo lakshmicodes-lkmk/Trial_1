@@ -44,7 +44,7 @@ flowchart TD
 ## Project Structure
 
 ``` text
-trial_3_lab_7.py
+Capstone_checkpoint_7.py
 │
 ├── Configuration
 │   ├── OpenRouter / environment configuration
@@ -482,7 +482,7 @@ remain important.
   -----------------------------------------------------------------------
   File                                Purpose
   ----------------------------------- -----------------------------------
-  `trial_3_lab_7.py`                  Final production-hardened Wikipedia
+  `Capstone_checkpoint_7.py`                  Final production-hardened Wikipedia
                                       RAG implementation
 
   `checkpoint_7_1_test_cases.json`    24-case Wikipedia-aligned
@@ -491,7 +491,7 @@ remain important.
   `7_2_evaluation_results.json`       Structured per-case results and
                                       aggregate metrics
 
-  `Out_7_3_mod.txt`                   Console output from the final Trial
+  `Output_7_1.txt`                   Console output from the final Trial
                                       3 run
 
   `7_1_model_production_2.log`        Runtime / production log
@@ -564,11 +564,11 @@ The run will:
 Recommended primary submission artifacts:
 
 ``` text
-trial_3_lab_7.py
+Capstone_checkpoint_7.py
 checkpoint_7_1_test_cases.json
 7_2_evaluation_results.json
-Out_7_3_mod.txt
-README_trial_3_lab_7.md
+Output_7_1.txt
+README_Capstone_7.md
 ```
 
 Together, these files provide the implementation, evaluation design,
