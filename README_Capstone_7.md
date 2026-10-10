@@ -14,30 +14,9 @@ and a quantitative evaluation framework.
 
 ## System Architecture
 
-``` mermaid
-flowchart TD
-    Q[User Question] --> S[Security Middleware]
-    S --> C{Semantic Cache}
-    C -->|Validated hit| CA[Cached Answer]
-    C -->|Miss| R{Query Router}
+## System Architecture
 
-    R -->|DIRECT| D[Direct Path<br/>gpt-5-nano]
-    D --> H[Hybrid Retrieval]
-    H --> G{Answer Quality Gate}
-    G -->|Pass| A[Grounded Answer]
-    G -->|Fail| AG[Agentic Path<br/>gpt-5.4-mini]
-
-    R -->|AGENT| AG
-    AG --> AR[Multi-step Retrieval<br/>MAX_STEPS = 3]
-    AR --> A
-
-    AG -->|Optional hard-query fallback| F[gpt-5.4]
-    F --> A
-
-    S --> SP[Security / Adversarial Probe]
-    A --> E[Evaluation Framework]
-    E --> J[7_2_evaluation_results.json]
-```
+![Checkpoint 7.1 Production-Ready RAG System Architecture](mermaid_7.png)
 
 ------------------------------------------------------------------------
 
