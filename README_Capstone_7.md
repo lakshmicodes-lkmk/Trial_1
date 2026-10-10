@@ -1,6 +1,6 @@
 # Capstone Checkpoint 7.1 --- Production-Ready Wikipedia RAG
 
-`trial_3_lab_7.py` is the final production-hardening checkpoint for the
+`Capstone_Checkpoint_7_1.py` is the final production-hardening checkpoint for the
 Wikipedia RAG system. It combines the security safeguards from Lab 7.1
 with the performance and cost optimizations from Lab 7.2, then evaluates
 the complete system on a 24-case Wikipedia-aligned test set.
@@ -44,7 +44,7 @@ flowchart TD
 ## Project Structure
 
 ``` text
-Capstone_checkpoint_7.py
+Capstone_checkpoint_7_1.py
 │
 ├── Configuration
 │   ├── OpenRouter / environment configuration
